@@ -1,2 +1,2 @@
-# bot_Yuvika
+# Yuvika
 The home of twitter bot Yuvika.
