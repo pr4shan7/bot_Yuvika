@@ -12,19 +12,6 @@ p7_id = api.get_user(p7).id
 # print(type(p7_id))
 
 
-def set_toFollow():
-    s = set()
-    for follower in tweepy.Cursor(api.followers).items():
-        s.add(follower.id)
-    for follower in tweepy.Cursor(api.followers, p7).items():
-        s.add(follower.id)
-    return s
-
-
-follow_list = set_toFollow()
-# print(len(follow_list))
-
-
 def set_following():
     s = set()
     for friend in tweepy.Cursor(api.friends).items():
@@ -34,6 +21,20 @@ def set_following():
 
 following_list = set_following()
 # print(len(following_list))
+
+
+def set_toFollow():
+    s = set()
+    for follower in tweepy.Cursor(api.followers).items():
+        s.add(follower.id)
+    for follower in tweepy.Cursor(api.followers, p7).items():
+        s.add(follower.id)
+    s.remove(api.me().id)
+    return s
+
+
+follow_list = set_toFollow()
+# print(len(follow_list))
 
 
 """ rate_limit = api.rate_limit_status()
