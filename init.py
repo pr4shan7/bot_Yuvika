@@ -7,8 +7,8 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 # me = api.me()
-p7 = 'pr4shan7'
-p7_id = api.get_user(p7).id
+# p7 = 'pr4shan7'
+# p7_id = api.get_user(p7).id
 
 
 def set_following():
