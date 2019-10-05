@@ -7,9 +7,8 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 # me = api.me()
-p7 = 'pr4shan7'
-p7_id = api.get_user(p7).id
-# print(type(p7_id))
+# p7 = 'pr4shan7'
+# p7_id = api.get_user(p7).id
 
 
 def set_following():
@@ -20,7 +19,6 @@ def set_following():
 
 
 following_list = set_following()
-# print(len(following_list))
 
 
 def set_toFollow():
@@ -34,8 +32,6 @@ def set_toFollow():
 
 
 follow_list = set_toFollow()
-# print(len(follow_list))
 
 
-""" rate_limit = api.rate_limit_status()
-print(rate_limit) """
+# rate_limit = api.rate_limit_status() 
