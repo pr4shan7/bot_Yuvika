@@ -4,3 +4,6 @@ __pycache__/
 # custom files
 keys.py
 todo.txt
+
+# folders
+.vscode/
